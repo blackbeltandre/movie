@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    tools:context="com.tulisandigital.movie.activity.DetailMovieActivity">
+    <TextView
+        android:paddingTop="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:id="@+id/title"
+        android:layout_width="520dp"
+        android:layout_height="95dp"
+        android:background="#196767"
+        android:shadowColor="@android:color/black"
+        android:text="JUDUL"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+    <ScrollView
+        android:padding="8sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        tools:layout_editor_absoluteY="2dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="88sp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.62"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/gambar_movie"
+                    android:layout_width="189dp"
+                    android:layout_height="212dp"
+                    android:layout_marginBottom="0sp"
+                    android:layout_marginLeft="0sp"
+                    android:layout_marginRight="0sp"
+                    android:layout_marginTop="0sp"
+                    android:gravity="left"
+                    android:src="@mipmap/ic_launcher"
+                    android:text="GAMBAR"
+                    android:textColor="#4cd"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:layout_width="181dp"
+                    android:layout_height="235dp"
+                    android:orientation="vertical"
+                    android:paddingTop="88sp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/release_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginTop="0sp"
+                        android:gravity="center"
+                        android:text="release_date"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+
+                    <TextView
+                        android:id="@+id/popularity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/release_date"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:dividerHeight="12dp"
+                        android:gravity="center"
+                        android:text="popularity"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:transcriptMode="normal" />
+
+                    <TextView
+                        android:id="@+id/vote_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/popularity"
+                        android:layout_marginTop="11dp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:adjustViewBounds="true"
+                        android:divider="#444"
+                        android:dividerHeight="12dp"
+                        android:gravity="center"
+                        android:text="vote_count"
+                        android:textColor="#000"
+                        android:transcriptMode="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:divider="#444"
+                        android:dividerHeight="12dp"
+                        android:gravity="center_vertical"
+                        android:text="/"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:transcriptMode="normal"
+                        android:layout_alignBaseline="@+id/vote_count"
+                        android:layout_alignBottom="@+id/vote_count"
+                        android:id="@+id/textView8"
+                        android:layout_toRightOf="@+id/vote_count" />
+                    <TextView
+                        android:id="@+id/vote_average"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:divider="#444"
+                        android:dividerHeight="12dp"
+                        android:gravity="center"
+                        android:text="vote_average"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:transcriptMode="normal"
+                        android:layout_alignBaseline="@+id/textView8"
+                        android:layout_alignBottom="@+id/textView8"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left|center_horizontal"
+                android:text="REMARKS"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorBackground"
+                android:textStyle="bold|normal" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
